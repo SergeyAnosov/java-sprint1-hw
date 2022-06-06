@@ -25,6 +25,7 @@ public class Main {
                 System.out.println("Среднее количество шагов: " + (stepTracker.sumMonthSteps(month) / 30));
                 System.out.println("Пройденная дистанция (в км): " + converter.distance(stepTracker.sumMonthSteps(month)));
                 System.out.println("Количество сожжённых килокалорий: " + converter.consumption(stepTracker.sumMonthSteps(month)));
+                System.out.println("Лучшая серия: " + stepTracker.bestSeria(month));
                 
                 
                 
