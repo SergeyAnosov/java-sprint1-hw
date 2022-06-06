@@ -5,9 +5,10 @@ public class StepTracker {
     Scanner scanner = new Scanner(System.in);
 
     public int changeGoal(int steps) {
-        stepsGoal = steps;
+        stepsGoal = steps;      
         return stepsGoal;
     }
+    
     MonthData[] monthToData = new MonthData[];
 
 
