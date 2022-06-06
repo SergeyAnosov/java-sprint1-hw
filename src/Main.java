@@ -12,15 +12,12 @@ public class Main {
             int command = scanner.nextInt();
 
             if (command == 1) {
-                System.out.println("За какой месяц вы хотите ввести шаги?");
-                int month = scanner.nextInt();
-                System.out.println("За какой день вы хотите ввести шаги? (от 1 до 30)");
-                int day = scanner.nextInt();
-                System.out.println("Введите количество шагов:");
-                int steps = scanner.nextInt();
+                stepTracker.setStepValue();            
 
             } else if (command == 2) {
+                
             } else if (command == 3) {
+                
                 System.out.println("Текущая цель: " + stepTracker.stepsGoal);
                 System.out.println("Введите новую цель по шагам в день:");
                 int goal = scanner.nextInt();
