@@ -20,7 +20,7 @@ public class Main {
                 System.out.println("Количество пройденных шагов по дням: ");
                 stepTracker.stepPerDay(month);
                 System.out.println("Общее количество шагов за месяц: " + sumMonthSteps(month));
-                
+                System.out.println("Максимальное пройденное количество шагов в месяце: " + maxMonthStep(month));
                 
                 
                 
