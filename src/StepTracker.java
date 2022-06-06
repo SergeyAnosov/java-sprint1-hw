@@ -1,16 +1,19 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.Scanner;
 
 public class StepTracker {
+
     public int stepsGoal = 10000;
+
     Scanner scanner = new Scanner(System.in);
 
     public int changeGoal(int steps) {
-        stepsGoal = steps;      
+        stepsGoal = steps;
         return stepsGoal;
     }
     
-    MonthData[] monthToData = new MonthData[];
-
+    MonthData[] monthToData;
 
     public StepTracker() {
 
@@ -21,31 +24,42 @@ public class StepTracker {
     }
 
     class MonthData {
-       int[] days = new int[30];
+       int[] days;
+
+       public MonthData() {
+           days = new int[30];
+       }
     }
 
     public void setStepValue() {
         System.out.println("За какой месяц вы хотите ввести шаги? (от 1 до 12)");
-        if ((scanner.hasNextInt()) {
-            int month = scanner.nextInt();
-        } else {
-            System.out.println("Извините, не верный ввод. Перезапустите программу и попробуйте снова");
+        int month = scanner.nextInt();
+        if (month < 1 || month > 12) {
+            System.out.println("Ошибка. Начните заново");
+            return;
         }
+
         System.out.println("За какой день вы хотите ввести шаги? (от 1 до 30)");
-        int day = scanner.nextInt();             
+        int day = scanner.nextInt();
+        if (day < 1 || day > 30) {
+            System.out.println("Ошибка. Начните заново");
+            return;
+        }
         System.out.println("Введите количество шагов (строго больше нуля):");
         int steps = scanner.nextInt();
         if (steps <= 0) {
-            System.out.println("введено отрицательное число. Программа завершена");
+            System.out.println("Ошибка. Начните заново");
             return;
         }
-        
-        monthToData[month-1].days[day-1] = steps;
+
+        monthToData[month - 1].days[day - 1] = steps;
+
     }
     
     public void stepPerDay(int month) {
         for (int i = 0; i < 30; i++) {
             System.out.println(i + " день: " + monthToData[month - 1].days[i]);
+        }
     }
     
     public int sumMonthSteps(int month) {
@@ -84,7 +98,7 @@ public class StepTracker {
         return seria;
     }
         
-    scanner.close();
+
         
     
 

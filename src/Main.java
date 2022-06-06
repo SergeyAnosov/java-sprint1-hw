@@ -13,7 +13,7 @@ public class Main {
             int command = scanner.nextInt();
 
             if (command == 1) {
-                stepTracker.setStepValue();            
+                stepTracker.setStepValue();
 
             } else if (command == 2) {
                 System.out.println("За какой месяц вы хотите получить статистику (от 1 до 12):");
@@ -26,8 +26,6 @@ public class Main {
                 System.out.println("Пройденная дистанция (в км): " + converter.distance(stepTracker.sumMonthSteps(month)));
                 System.out.println("Количество сожжённых килокалорий: " + converter.consumption(stepTracker.sumMonthSteps(month)));
                 System.out.println("Лучшая серия: " + stepTracker.bestSeria(month));
-                
-                
                 
             } else if (command == 3) {
                 
@@ -51,7 +49,6 @@ public class Main {
 
     }
 
-
     public static void printMenu() {
         System.out.println("Что вы хотите сделать?");
         System.out.println("1. Ввести количество шагов за определённый день");
@@ -59,5 +56,4 @@ public class Main {
         System.out.println("3. Изменить цель по количеству шагов в день");
         System.out.println("4. Выйти из приложения");
     }
-    scanner.close();
 }
