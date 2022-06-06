@@ -39,5 +39,18 @@ public class StepTracker {
         monthToData[month-1].days[day-1] = steps;
     }
     
+    public void stepPerDay(int month) {
+        for (int i = 0; i < 30; i++) {
+            System.out.println(i + " день: " + monthToData[month - 1].days[i]);
+    }
+    
+    public int sumMonthSteps(int month) {
+        int sum = 0;
+        for (int i = 0; i < 30; i++) {
+            sum = sum + monthToData[month - 1].days[i];
+        }
+        return sum;
+        
+    }
 
 }
