@@ -6,6 +6,7 @@ public class Main {
         System.out.println("Пришло время практики!");
         Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker();
+        Converter converter = new Converter();
 
         while (true) {
             printMenu();
@@ -19,8 +20,11 @@ public class Main {
                 int month = scanner.nextInt();
                 System.out.println("Количество пройденных шагов по дням: ");
                 stepTracker.stepPerDay(month);
-                System.out.println("Общее количество шагов за месяц: " + sumMonthSteps(month));
-                System.out.println("Максимальное пройденное количество шагов в месяце: " + maxMonthStep(month));
+                System.out.println("Общее количество шагов за месяц: " + stepTracker.sumMonthSteps(month));
+                System.out.println("Максимальное пройденное количество шагов в месяце: " + stepTracker.maxMonthStep(month));
+                System.out.println("Среднее количество шагов: " + (stepTracker.sumMonthSteps(month) / 30));
+                System.out.println("Пройденная дистанция (в км): " + converter.distance(stepTracker.sumMonthSteps(month)));
+                System.out.println("Количество сожжённых килокалорий: " + converter.consumption(stepTracker.sumMonthSteps(month)));
                 
                 
                 
