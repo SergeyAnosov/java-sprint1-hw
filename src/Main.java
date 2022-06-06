@@ -15,6 +15,14 @@ public class Main {
                 stepTracker.setStepValue();            
 
             } else if (command == 2) {
+                System.out.println("За какой месяц вы хотите получить статистику (от 1 до 12):");
+                int month = scanner.nextInt();
+                System.out.println("Количество пройденных шагов по дням: ");
+                stepTracker.stepPerDay(month);
+                System.out.println("Общее количество шагов за месяц: " + sumMonthSteps(month));
+                
+                
+                
                 
             } else if (command == 3) {
                 
