@@ -27,12 +27,11 @@ public class StepTracker {
         System.out.println("За какой месяц вы хотите ввести шаги? (от 1 до 12)");
         int month = scanner.nextInt();
         System.out.println("За какой день вы хотите ввести шаги? (от 1 до 30)");
-        int day = scanner.nextInt();
-        if (day <= 0)             
+        int day = scanner.nextInt();             
         System.out.println("Введите количество шагов (строго больше нуля):");
         int steps = scanner.nextInt();
         if (steps <= 0) {
-            System.out.println("введено отрицательное число. программа завершена");
+            System.out.println("введено отрицательное число. Программа завершена");
             return;
         }
         
@@ -60,6 +59,24 @@ public class StepTracker {
             }
         }
         return max;
+    }
+        
+    public int bestSeria(int month) {
+        int seria = 0;
+        int count = 0;
+        
+        for (int i = 0; i < 30; i++) {
+            if (monthToData[month - 1].days[i] >= stepsGoal) {
+                count++;
+                 if (count > seria) {
+                    seria = count;
+                }
+            } else if (monthToData[month - 1].days[i] < stepsGoal)  { 
+                
+                count = 0;
+            } 
+        }
+        rerutn seria;
     }
         
     
