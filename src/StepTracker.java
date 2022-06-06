@@ -97,9 +97,4 @@ public class StepTracker {
         }
         return seria;
     }
-        
-
-        
-    
-
 }

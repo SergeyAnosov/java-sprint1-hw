@@ -13,9 +13,11 @@ public class Main {
             int command = scanner.nextInt();
 
             if (command == 1) {
+
                 stepTracker.setStepValue();
 
             } else if (command == 2) {
+
                 System.out.println("За какой месяц вы хотите получить статистику (от 1 до 12):");
                 int month = scanner.nextInt();
                 System.out.println("Количество пройденных шагов по дням: ");
@@ -33,7 +35,7 @@ public class Main {
                 System.out.println("Введите новую цель по шагам в день:");
                 int goal = scanner.nextInt();
                 if (goal <= 0) {
-                    System.out.println("Цель должна быть положительная");
+                    System.out.println("Цель должна быть положительная. Начните заново");
                 } else {
                     stepTracker.changeGoal(goal);
                     System.out.println("Новая цель: " + stepTracker.stepsGoal);
@@ -44,10 +46,10 @@ public class Main {
             } else {
                 System.out.println("Такой команды пока нет");
             }
-
         }
 
     }
+
 
     public static void printMenu() {
         System.out.println("Что вы хотите сделать?");
@@ -57,3 +59,4 @@ public class Main {
         System.out.println("4. Выйти из приложения");
     }
 }
+
