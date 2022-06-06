@@ -26,7 +26,11 @@ public class StepTracker {
 
     public void setStepValue() {
         System.out.println("За какой месяц вы хотите ввести шаги? (от 1 до 12)");
-        int month = scanner.nextInt();
+        if ((scanner.hasNextInt()) {
+            int month = scanner.nextInt();
+        } else {
+            System.out.println("Извините, не верный ввод. Перезапустите программу и попробуйте снова");
+        }
         System.out.println("За какой день вы хотите ввести шаги? (от 1 до 30)");
         int day = scanner.nextInt();             
         System.out.println("Введите количество шагов (строго больше нуля):");
@@ -79,6 +83,8 @@ public class StepTracker {
         }
         return seria;
     }
+        
+    scanner.close();
         
     
 
