@@ -59,4 +59,5 @@ public class Main {
         System.out.println("3. Изменить цель по количеству шагов в день");
         System.out.println("4. Выйти из приложения");
     }
+    scanner.close();
 }
