@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class StepTracker {
 
-    public int stepsGoal = 10000;
+    private int stepsGoal = 10000; //а я не знаю какой должен быть модификатор. Нас ещё не учили :)
 
     Scanner scanner = new Scanner(System.in);
 
