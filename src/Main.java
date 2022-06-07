@@ -42,6 +42,7 @@ public class Main {
                 }
             } else if (command == 4) {
                 System.out.println("Программа завершена");
+                scanner.close();
                 return;
             } else {
                 System.out.println("Такой команды пока нет");
