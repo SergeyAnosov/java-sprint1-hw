@@ -1,13 +1,13 @@
 public class Converter {
+    double stepSize = 0.75;
+    int callorieInStep = 50;
 
     public double distance(int steps) {
-            double distance = steps * 0.75 / 1000;
-            return distance;
+            return steps * stepSize / 1000;
         }
 
         public double consumption(int steps) {
-            double consumption = steps * 50 / 1000;
-            return consumption;
+            return steps * callorieInStep / 1000;
 
         }
 
